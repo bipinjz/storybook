@@ -39,7 +39,7 @@ export default function TaskList({loading, onPinTask, onArchiveTask}){
         </div>
       );
 
-    if(loading){
+    if(status === 'loading'){
         return (
             <div className="list-items" data-testid="loading" key={"loading"}>
                 {LoadingRow}
