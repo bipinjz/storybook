@@ -2,6 +2,13 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTasks } from '../lib/store';
 import TaskList from './TaskList';
+import { HOC } from './HOC/HOC';
+import { Button } from './../stories/Button';
+
+const NewComp = HOC(Button, "apple")
+const NewComp2 = HOC(Button, "microsoft ")
+
+
 
 export default function InboxScreen() {
   const dispatch = useDispatch();
@@ -25,12 +32,19 @@ export default function InboxScreen() {
   }
   return (
     <div className="page lists-show">
+      <div>
+      <NewComp />
+      <NewComp2 />
+            
+      </div>
       <nav>
         <h1 className="title-page">
           <span className="title-wrapper">Taskbox</span>
         </h1>
       </nav>
+      
       <TaskList />
+      
     </div>
   );
 }
