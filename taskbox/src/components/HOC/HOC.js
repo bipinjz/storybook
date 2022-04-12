@@ -18,3 +18,10 @@ export function HOC(WrappedComponent, data){
     }
 }
 
+/**
+ * To Use 
+ */
+// const NewComp = HOC(Button, "apple")
+// const NewComp2 = HOC(Button, "microsoft ")
+// <NewComp />
+
