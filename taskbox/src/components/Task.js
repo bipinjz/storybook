@@ -10,6 +10,7 @@ export default function Task({task: { id, title, state }, onArchiveTask, onPinTa
                     defaultChecked={ state === 'TASK_ARCHIVED'}
                     disabled={true}
                     name="checked"
+                    
                 />
                 <span
                     className="checkbox-custom"
@@ -19,7 +20,7 @@ export default function Task({task: { id, title, state }, onArchiveTask, onPinTa
                 />
             </label>
             <div className="title">
-                <input type="text" value={title} readOnly={true} placeholder='Input title' />
+                <input type="text" value={title} readOnly={true} placeholder='Input title' style={{ background: 'yellow' }} />
             </div>
             
             <div className="actions" onClick={event => event.stopPropagation()}>
